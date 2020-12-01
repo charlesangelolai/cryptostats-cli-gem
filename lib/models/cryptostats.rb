@@ -14,19 +14,19 @@ class CryptoStats
     end
 
     def display_stats
-        puts "----------------------------------------------------------------------------------------------------"
+        puts "-------------------------------------------- Crypto Stats --------------------------------------------"
         #crypto_logo(self.image)
         puts "ID: #{self.id}"
         puts "Symbol: #{self.symbol.upcase}"
         puts "Current Price: $#{self.current_price}"
         puts "Market Cap: $#{self.market_cap}"
         puts "Total Volume: $#{self.total_volume}"
-        puts "High (24hrs): #{self.high_24h}%"
-        puts "Low (24hrs): #{self.low_24h}%"
+        puts "High (24hrs): $#{self.high_24h}"
+        puts "Low (24hrs): $#{self.low_24h}"
         puts "Price Change (24hrs): $#{self.price_change_24h}"
         puts "Percentage Change (24hrs): #{self.price_change_percentage_24h}%"
         puts "Last Updated: #{self.last_updated}"
-        puts "----------------------------------------------------------------------------------------------------"
+        puts "------------------------------------------------------------------------------------------------------"
     end
 
     # def crypto_logo(image)
