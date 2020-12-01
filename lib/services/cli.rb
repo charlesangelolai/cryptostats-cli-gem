@@ -63,9 +63,11 @@ class Cli
         elsif exit_option == "N"
             puts ""
             puts "Closing program..."
+            puts ""
         else
             puts ""
             puts "Invalid entry! Closing program.."
+            puts ""
         end
     end
 end
