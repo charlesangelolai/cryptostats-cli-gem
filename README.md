@@ -1,8 +1,7 @@
 # Cryptostats-CLI-Gem
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cryptostats/cli/gem`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to Cryptostats!
+Cryptostats is a CLI ruby gem that fetches meta data of the top 100 cryptocurrencies from the CoinGecko API and displays updated statistis regarding the current prices, market cap, volume, price change, etc.
 
 ## Installation
 
@@ -22,7 +21,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Execute inside the directory
+
+    $ ruby bin/run
+
+2. Enter the crypto number of the cryptocurrency for more details: (1 - 100)
+
+3. Crypto Stats is displayed.
 
 ## Development
 
