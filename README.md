@@ -23,8 +23,9 @@ Or install it yourself as:
 
 1. Execute inside the directory
 
+```
     $ ruby bin/run
-
+```
 2. Enter the crypto number of the cryptocurrency for more details: (1 - 100)
 
 3. Crypto Stats is displayed.
