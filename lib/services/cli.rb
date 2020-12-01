@@ -5,7 +5,7 @@ class Cli
         puts "---------- Welcome to CryptoStats! ----------"
         puts "---------------------------------------------"
         puts ""
-        puts " ~~> fetching data from CoinMarketCap API..."
+        puts " ~~> fetching data from CoinGecko..."
         puts " ~~> loading the top 100 cryptocurrencies..."
         Api.load_data
         main_menu
