@@ -1,6 +1,7 @@
 class Cli
 
     def start
+        puts ""
         puts "---------------------------------------------"
         puts "---------- Welcome to CryptoStats! ----------"
         puts "---------------------------------------------"
@@ -17,11 +18,13 @@ class Cli
         col3 = 50
         col4 = 75
 
+        standardize_crypto_name_length
+
         puts ""
         puts " --- Top 100 Cryptocurrencies --- "
         puts ""
         while col1 < 25
-            puts " #{col1 + 1}. #{CryptoStats.all[col1].symbol.upcase} \t\t #{col2 + 1}. #{CryptoStats.all[col2].symbol.upcase} \t\t #{col3 + 1}. #{CryptoStats.all[col3].symbol.upcase} \t\t #{col4 + 1}. #{CryptoStats.all[col4].symbol.upcase}"
+            puts " #{col1 + 1}. #{CryptoStats.all[col1].name} \t\t #{col2 + 1}. #{CryptoStats.all[col2].name} \t\t #{col3 + 1}. #{CryptoStats.all[col3].name} \t\t #{col4 + 1}. #{CryptoStats.all[col4].name}"
             
             col1 += 1
             col2 += 1
@@ -41,6 +44,7 @@ class Cli
 
         if option < 0 || option > 99
             puts "Invalid entry. Please try again..."
+            puts ""
             main_menu_options
         else
             puts ""
@@ -59,15 +63,25 @@ class Cli
         exit_option = get_input
 
         if exit_option == "Y"
-            main_menu
-        elsif exit_option == "N"
             puts ""
             puts "Closing program..."
             puts ""
+        elsif exit_option == "N"
+            main_menu
         else
+            puts "Invalid entry! Please try again.."
             puts ""
-            puts "Invalid entry! Closing program.."
-            puts ""
+            exit?
+        end
+    end
+
+    def standardize_crypto_name_length
+        max_length = 25
+
+        CryptoStats.all.each do |crypto|
+            while crypto.name.length < max_length
+                crypto.name += " "
+            end
         end
     end
 end
