@@ -16,7 +16,7 @@ class CryptoStats
     def display_stats
         puts "-------------------------------------------- Crypto Stats --------------------------------------------"
         #crypto_logo(self.image)
-        puts "ID: #{self.id}"
+        puts "ID: #{self.id.capitalize}"
         puts "Symbol: #{self.symbol.upcase}"
         puts "Current Price: $#{self.current_price}"
         puts "Market Cap: $#{self.market_cap}"
