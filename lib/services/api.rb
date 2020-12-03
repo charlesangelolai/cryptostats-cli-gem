@@ -1,5 +1,3 @@
-# https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=dff57c31-f1ac-4e58-ac07-74bd976ede24
-
 class Api
 
     def self.base_url

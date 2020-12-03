@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
     spec.authors       = ["Charles Lai"]
     spec.email         = ["charlesangeloplai@gmail.com"]
     spec.summary       = %q{Cryptocurrency Statistics}
-    spec.description   = %q{Welcome to Cryptostats! Cryptostats is a CLI ruby gem that fetches meta data of the top 100 cryptocurrencies from the CoinGecko API and displays updated statistis regarding the current prices, market cap, volume, price change, etc.}
+    spec.description   = %q{Welcome to Cryptostats! Cryptostats is a CLI ruby gem that fetches meta data of the top 100 cryptocurrencies from the CoinGecko API and displays updated statistics regarding the current prices, market cap, volume, price change, etc.}
     spec.license       = "MIT"
     spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
     
