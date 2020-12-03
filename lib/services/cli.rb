@@ -2,12 +2,12 @@ class Cli
 
     def start
         puts ""
-        puts "---------------------------------------------"
-        puts "---------- Welcome to CryptoStats! ----------"
-        puts "---------------------------------------------"
+        puts "---------------------------------------------".yellow
+        puts "---------- Welcome to CryptoStats! ----------".yellow
+        puts "---------------------------------------------".yellow
         puts ""
-        puts " ~~> fetching data from CoinGecko..."
-        puts " ~~> loading the top 100 cryptocurrencies..."
+        puts " ~~> fetching data from CoinGecko...".blue
+        puts " ~~> loading the top 100 cryptocurrencies...".blue
         Api.load_data
         main_menu
     end
@@ -21,7 +21,7 @@ class Cli
         standardize_crypto_name_length
 
         puts ""
-        puts " --- Top 100 Cryptocurrencies --- "
+        puts " --- Top 100 Cryptocurrencies --- ".green
         puts ""
         while col1 < 25
             puts " #{col1 + 1}. #{CryptoStats.all[col1].name} \t\t #{col2 + 1}. #{CryptoStats.all[col2].name} \t\t #{col3 + 1}. #{CryptoStats.all[col3].name} \t\t #{col4 + 1}. #{CryptoStats.all[col4].name}"
@@ -38,12 +38,12 @@ class Cli
     end
 
     def main_menu_options
-        print "Enter the Cryptocurrency number to view more details: "
+        print "Enter the Cryptocurrency number to view more details: ".green
         option = get_input
         option = option.to_i - 1
 
         if option < 0 || option > 99
-            puts "Invalid entry. Please try again..."
+            puts "Invalid entry. Please try again...".red
             puts ""
             main_menu_options
         else
@@ -59,7 +59,7 @@ class Cli
     end
 
     def exit?
-        print "Would you like to exit the program? (Y/N) "
+        print "Would you like to exit the program? (Y/N) ".green
         exit_option = get_input
 
         if exit_option == "Y"
@@ -69,7 +69,7 @@ class Cli
         elsif exit_option == "N"
             main_menu
         else
-            puts "Invalid entry! Please try again.."
+            puts "Invalid entry! Please try again..".red
             puts ""
             exit?
         end
