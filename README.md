@@ -31,7 +31,7 @@ git clone https://github.com/charlesangelolai/cryptostats-cli-gem.git
 1. Execute inside the directory:
 
 ```
-$ bin/cryptostats
+$ bin/run
 ```
 
 2. Enter the crypto number of the cryptocurrency for more details: (1 - 100)
