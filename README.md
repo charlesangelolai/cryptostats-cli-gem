@@ -20,7 +20,7 @@ Or install it yourself as:
 $ gem install cryptostats-cli-gem
 ```
 
-#### Option 2 - Clone Git the repository:
+#### Option 2 - Clone the Git repository:
 
 ```
 git clone https://github.com/charlesangelolai/cryptostats-cli-gem.git
