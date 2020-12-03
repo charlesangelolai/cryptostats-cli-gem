@@ -7,7 +7,9 @@ class Cli
         puts "---------------------------------------------".yellow
         puts ""
         puts " ~~> fetching data from CoinGecko...".blue
+        sleep(1)
         puts " ~~> loading the top 100 cryptocurrencies...".blue
+        sleep(1)
         Api.load_data
         main_menu
     end
