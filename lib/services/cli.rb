@@ -40,19 +40,28 @@ class Cli
     end
 
     def main_menu_options
-        print "Enter the Cryptocurrency number to view more details: ".green
+        print "Enter the Cryptocurrency number to view more details or type 'exit' to leave the program: ".green
         option = get_input
-        option = option.to_i - 1
 
-        if option < 0 || option > 99
+        if option == "exit"
+            puts ""
+            puts "Closing program..."
+            puts ""
+        elsif option.to_i - 1 < 0 || option.to_i - 1 > 99
             puts "Invalid entry. Please try again...".red
             puts ""
             main_menu_options
         else
             puts ""
-            CryptoStats.all[option].display_stats
+            CryptoStats.all[option.to_i - 1].display_stats
             puts ""
-            exit?
+            puts "Press any key to continue...".green
+            gets.chomp
+            puts " ~~> fetching data from CoinGecko...".blue
+            sleep(1)
+            puts " ~~> loading the top 100 cryptocurrencies...".blue
+            sleep(1)
+            main_menu
         end
     end
 
@@ -60,22 +69,22 @@ class Cli
         gets.chomp
     end
 
-    def exit?
-        print "Would you like to exit the program? (Y/N) ".green
-        exit_option = get_input
+    # def exit?
+    #     print "Would you like to exit the program? (Y/N) ".green
+    #     exit_option = get_input
 
-        if exit_option == "Y"
-            puts ""
-            puts "Closing program..."
-            puts ""
-        elsif exit_option == "N"
-            main_menu
-        else
-            puts "Invalid entry! Please try again..".red
-            puts ""
-            exit?
-        end
-    end
+    #     if exit_option == "Y"
+    #         puts ""
+    #         puts "Closing program..."
+    #         puts ""
+    #     elsif exit_option == "N"
+    #         main_menu
+    #     else
+    #         puts "Invalid entry! Please try again..".red
+    #         puts ""
+    #         exit?
+    #     end
+    # end
 
     def standardize_crypto_name_length
         max_length = 25
