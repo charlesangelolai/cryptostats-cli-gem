@@ -55,7 +55,7 @@ class Cli
             puts ""
             CryptoStats.all[option.to_i - 1].display_stats
             puts ""
-            puts "Press any key to continue...".green
+            puts "Press the 'Enter' key to continue...".green
             gets.chomp
             puts " ~~> fetching data from CoinGecko...".blue
             sleep(1)
